@@ -1,2 +1,13 @@
-@import '../components/SplinePresentation/spline';
+@import '../styles/Vars';
 
+
+/* Components Styling */
+@import '../components/CustomCursor/CustomCursor';
+@import '../components/Rod/Rod';
+@import '../components/TextStyled/TextStyled';
+@import '../components/SplineImg/SplineImg';
+/* Components Styling */
+
+/* Page Styling May be deleted later  */
+@import '../styles/Landing';
+/* */
