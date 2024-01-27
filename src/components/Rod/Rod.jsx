@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CustomCursor() {
+export default function Rod() {
   
   return (
     <div className='bar-container'>

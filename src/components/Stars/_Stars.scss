@@ -16,6 +16,11 @@
   animation: movingStars 40s linear infinite;
 }
 
+.large-star {
+  width: 2px;
+  height: 2px;
+}
+
 @keyframes movingStars {
   0%, 100% {
     transform: translateY(0) translateX(0);
@@ -29,10 +34,4 @@
   75% {
     transform: translateY(-2.5vh) translateX(2.5vh);
   }
-}
-
-
-.large-star {
-  width: 2px;
-  height: 2px;
 }

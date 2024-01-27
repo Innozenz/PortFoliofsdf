@@ -14,7 +14,8 @@ export default function Stars() {
       for (let i = 0; i < maxStars; i++) {
         const randomX = Math.floor(Math.random() * screenWidth);
         const randomY = Math.floor(Math.random() * lineHeight);
-        generatedStars.push({ x: randomX, y: randomY });
+        const size = Math.random() < 0.1 ? 2 : 1; // 5% of stars are larger (width of 2px)
+        generatedStars.push({ x: randomX, y: randomY, size: size });
       }
 
       setStars(generatedStars);
@@ -38,7 +39,8 @@ export default function Stars() {
   return (
     <div className="stars-container">
       {stars.map((star, index) => (
-        <div key={index} className="star" style={{ top: `${star.y}px`, left: `${star.x}px` }} />
+        <div key={index} className={`star ${star.size === 2 ? 'large-star' : ''}`} 
+             style={{ top: `${star.y}px`, left: `${star.x}px`, width: `${star.size}px`, height: `${star.size}px` }} />
       ))}
     </div>
   );
