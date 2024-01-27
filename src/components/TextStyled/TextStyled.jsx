@@ -1,63 +1,53 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function TextStyled() {
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let interval = null;
 
-  const textRef = useRef();
-  const [originalText, setOriginalText] = useState("Di Majo Wilsfried");
-  const [animatedText, setAnimatedText] = useState("Développeur Front-End.");
+  const handleMouseOver = (event) => {
+    let iteration = 0;
 
-  useLayoutEffect(() => {
-    console.log("Effect is running");
+    clearInterval(interval);
 
-    const onMouseOverHandler = () => {
-      console.log("Mouseover event triggered");
-      let iteration = 0;
+    interval = setInterval(() => {
+      event.target.innerText = event.target.innerText
+        .split("")
+        .map((letter, index) => {
+          if (index < iteration) {
+            return event.target.dataset.value[index];
+          }
 
-      clearInterval(interval);
+          return letters[Math.floor(Math.random() * 26)];
+        })
+        .join("");
 
-      interval = setInterval(() => {
-        setAnimatedText((prevText) =>
-          prevText
-            .split("")
-            .map((letter, index) => {
-              if (index < iteration) {
-                return originalText[index];
-              }
+      if (iteration >= event.target.dataset.value.length) {
+        clearInterval(interval);
+      }
 
-              return letters[Math.floor(Math.random() * 26)];
-            })
-            .join("")
-        );
+      iteration += 1 / 3;
+    }, 30);
+  };
 
-        if (iteration >= originalText.length) {
-          clearInterval(interval);
-        }
+  useEffect(() => {
+    const effectElements = document.querySelectorAll(".effect");
 
-        iteration += 1 / 3;
-      }, 30);
-    };
+    effectElements.forEach((element) => {
+      element.addEventListener("mouseover", handleMouseOver);
 
-    const textElement = textRef.current;
-
-    if (textElement) {
-      textElement.addEventListener("mouseover", onMouseOverHandler);
-    }
-
-    return () => {
-      console.log("Cleanup");
-      clearInterval(interval);
-    };
-  }, [originalText]);
+      return () => {
+        element.removeEventListener("mouseover", handleMouseOver);
+      };
+    });
+  }, []);
 
   return (
     <div className="textStyled">
-      <p className="effect">
-        {originalText}
+      <p className="effect" data-value="Di Majo Wilsfried">
+        Di Majo Wilsfried
       </p>
-      <p className="effect">
-        {animatedText}
+      <p className="effect" data-value="Développeur Web FrontEnd.">
+        Développeur Web FrontEnd.
       </p>
     </div>
   );
