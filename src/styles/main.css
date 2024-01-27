@@ -22,6 +22,9 @@ body {
   border-radius: 50%;
   pointer-events: none;
   mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  left: 150px;
+  top: 200px;
   transition: transform 0.1s ease-out;
 }
 
@@ -31,12 +34,17 @@ body {
   height: 60px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
-  filter: blur(5px);
+  filter: blur(15px);
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
 }
 
+@media only screen and (max-width: 1280px) {
+  .custom-cursor .light-effect {
+    background-color: rgb(246, 246, 94);
+  }
+}
 .bar-container {
   width: 2px;
   height: 90%;
@@ -71,31 +79,84 @@ body {
   }
 }
 .textStyled {
-  font-size: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
   color: aliceblue;
-  width: 550px;
-  text-align: right;
+  text-align: center;
   font-family: "Space Mono", monospace, sans-serif;
+}
+.textStyled .effect {
+  margin: 5px;
 }
 
 .wrapper {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  height: 100vh;
-}
-.wrapper_design {
-  height: 800px;
-  width: 650px;
-}
-.wrapper_design_img {
+  height: 350px;
   border-radius: 50%;
+}
+.wrapper_img {
+  border-radius: 50%;
+  width: 250px;
   position: absolute;
-  width: 450px;
-  left: 11.5%;
-  top: 24%;
+}
+.wrapper_spline {
+  display: none;
+}
+@media only screen and (min-width: 1400px) {
+  .wrapper_spline {
+    display: block;
+  }
+}
+
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.star {
+  z-index: -5;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+  animation: movingStars 40s linear infinite;
+}
+
+@keyframes movingStars {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(2.5vh) translateX(2.5vh);
+  }
+  50% {
+    transform: translateY(0) translateX(5vh);
+  }
+  75% {
+    transform: translateY(-2.5vh) translateX(2.5vh);
+  }
+}
+.large-star {
+  width: 2px;
+  height: 2px;
 }
 
 /* Components Styling */
 /* Page Styling May be deleted later  */
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* *//*# sourceMappingURL=Main.css.map */

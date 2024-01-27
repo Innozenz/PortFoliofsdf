@@ -1,7 +1,13 @@
 .textStyled{
-    font-size: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
     color: aliceblue;
-    width: 550px;
-    text-align: right;
-    font-family: 'Space Mono', monospace, sans-serif; 
+    text-align: center;
+    font-family: 'Space Mono', monospace, sans-serif;
+    .effect{
+        margin: 5px;
+    }
 }

@@ -1,18 +1,20 @@
 .wrapper{
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    height: 100vh;
-    &_design{
-        height: 800px;
-        width: 650px;
-        &_img{
-            border-radius: 50%;
-            position: absolute;
-            width: 450px;
-            left: 11.5%;
-            top: 24%;
-        }
+    height: 350px;
+    border-radius: 50%;
+    &_img {
+        border-radius: 50%;
+        width: 250px;
+        position: absolute;
+    }
+    &_spline{
+        display: none;
+        @media only screen 
+        and (min-width : 1400px) {
+        display: block;
+     } 
     }
 }
 

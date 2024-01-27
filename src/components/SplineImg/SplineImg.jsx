@@ -6,14 +6,14 @@ import Spline from '@splinetool/react-spline';
 
 export default function SplineImg() {
   return (
-    <div className='wrapper'>
-      <div className='wrapper_design'>
+    <div>
+      <div className='wrapper'>
         <img 
-          className="wrapper_design_img" 
+          className="wrapper_img" 
           src={placeholder} 
           alt="Placeholder"
         />
-        <Spline scene="https://prod.spline.design/8pPEgqGidOE2Rwlr/scene.splinecode" />
+        {/* <Spline className="wrapper_spline" scene="https://prod.spline.design/8pPEgqGidOE2Rwlr/scene.splinecode" /> */}
       </div>
     </div>
   );
