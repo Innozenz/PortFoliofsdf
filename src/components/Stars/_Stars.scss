@@ -21,6 +21,43 @@
   height: 2px;
 }
 
+.shooting-star {
+  z-index: -5;
+  position: absolute;
+  animation: shootingStarsAnimation linear infinite;
+}
+
+.shooting-star::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 150px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, transparent);
+}
+
+.shooting-star.blue::after {
+  background: linear-gradient(90deg, rgba(173, 173, 230, 0.5), transparent );
+}
+
+.shooting-star.red::after {
+  background: linear-gradient(90deg, rgba(238, 161, 173, 0.5), transparent);
+}
+
+.shooting-star.yellow::after {
+  background: linear-gradient(90deg, rgba(237, 237, 168, 0.5), transparent);
+}
+
+.shooting-star.purple::after {
+  background: linear-gradient(90deg, rgba(234, 153, 231, 0.5), transparent);
+}
+
+.shooting-star.orange::after {
+  background: linear-gradient(90deg, rgba(198, 156, 79, 0.5), transparent);
+}
+
+
+
 @keyframes movingStars {
   0%, 100% {
     transform: translateY(0) translateX(0);
@@ -33,5 +70,14 @@
   }
   75% {
     transform: translateY(-2.5vh) translateX(2.5vh);
+  }
+}
+
+@keyframes shootingStarsAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
