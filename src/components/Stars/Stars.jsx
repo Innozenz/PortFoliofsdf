@@ -5,16 +5,16 @@ export default function Stars() {
 
   useEffect(() => {
     const generateStars = () => {
-      const screenWidth = window.innerWidth + 50;
+      const screenWidth = window.innerWidth + 100;
       const lineHeight = window.innerHeight;
       const numberOfLines = Math.floor(window.innerHeight / lineHeight);
       const maxStars = Math.floor((screenWidth / lineHeight) * 400 * numberOfLines); 
       const generatedStars = [];
 
       for (let i = 0; i < maxStars; i++) {
-        const randomX = Math.floor(Math.random() * screenWidth);
-        const randomY = Math.floor(Math.random() * lineHeight);
-        const size = Math.random() < 0.1 ? 2 : 1; // 5% of stars are larger (width of 2px)
+        const randomX = Math.floor(Math.random() * screenWidth );
+        const randomY = Math.floor(Math.random() * lineHeight );
+        const size = Math.random() < 0.1 ? 2 : 1; // 10% of stars are larger (width of 2px)
         generatedStars.push({ x: randomX, y: randomY, size: size });
       }
 
