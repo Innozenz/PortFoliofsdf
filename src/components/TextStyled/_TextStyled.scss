@@ -5,7 +5,13 @@
     color: aliceblue;
     text-align: center;
     font-family: 'Space Mono', monospace, sans-serif;
+    max-width: 100%;
     .effect{
         margin: 5px;
+    }
+    .smoothTalk{
+        font-size: 16px;
+        margin: 0px;
+        padding: 5vw 10px 0px 10px; /* Attention padding vw Attention je répéte Paddding en VW ! */
     }
 }

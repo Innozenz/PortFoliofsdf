@@ -49,6 +49,10 @@ export default function TextStyled() {
       <p className="effect" data-value="Développeur Web FrontEnd.">
         Développeur Web FrontEnd.
       </p>
+
+      <p className="smoothTalk">
+        Ayant un attrait particulier pour le développement Web ainsi que l'UI et l'UX
+      </p>
     </div>
   );
 }
