@@ -88,4 +88,5 @@ export default function Stars() {
   );
 }
 
-/* Possibility of upgrade, make a min and max numbers of shooting stars and adding a minimum number of lines between each "shooting stars" */
+/* Possibility of upgrade, make a min and max numbers of shooting stars and adding a minimum number of lines between each "shooting stars" and see if colors better or not
+See if able to make it so stars can have various size ( has been deleted see if able to make it again ) */
