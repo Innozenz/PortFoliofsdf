@@ -3,6 +3,10 @@
   cursor: none;
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
+
 html,
 body {
   height: 100%;
