@@ -12,7 +12,7 @@ import PageChange from "../components/PageChange/PageChange";
 export default function Landing() {
 
   return (
-    <div>
+    <div className="landingPlacement">
         <CustomCursor />
         <Stars />
         <main className="flexbox">

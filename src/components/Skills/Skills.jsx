@@ -20,11 +20,12 @@ export default function Skills() {
     const screenWidth = window.innerWidth;
 
     const increment = screenWidth > 650 ? 2 : 1;
+    const multiplicator = screenWidth > 650 ? 4 : 3;
 
     const getRandomColumn = () => {
       let randomColumn;
       do {
-        randomColumn = Math.floor(Math.random() * 4) + increment; 
+        randomColumn = Math.floor(Math.random() * multiplicator) + increment; 
       } while (randomColumn === 1 || randomColumn === 6);
       return randomColumn;
     };

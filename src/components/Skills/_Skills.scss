@@ -1,19 +1,19 @@
 .SkillsWrapper{
-    width: 95%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    grid-gap: 5px;
     align-items: center;
     justify-items: center;
     border-radius: 35px;
+    row-gap: 10px;
     padding: 10px 0px 10px 0px;
     .SkillContainer{
         z-index: 1;
         height: 30vw;
-        max-height: 150px; /* Mobile and desktop*/
+        max-height: 115px; /* Mobile and desktop*/
         width: 30vw; /* Mobile and desktop */
-        max-width: 150px;
+        max-width: 115px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -29,8 +29,7 @@
     }
     
     .SkillContainer:hover{
-        transform: rotate(360deg);
-        transition: transform 0.3s ease-in-out;
+        animation: rotateAnimation 0.8s forwards;
     }
     .SkillContainer::after{
         border: 10px grey solid;
@@ -58,4 +57,11 @@
   transform: skew(300deg);
 }
 
-
+@keyframes rotateAnimation {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }

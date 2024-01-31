@@ -12,7 +12,6 @@ export default function SplineImg() {
           src={placeholder} 
           alt="Placeholder"
         />
-        {/* <Spline className="wrapper_spline" scene="https://prod.spline.design/8pPEgqGidOE2Rwlr/scene.splinecode" /> */}
       </div>
     </div>
   );

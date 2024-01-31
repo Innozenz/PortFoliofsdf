@@ -3,24 +3,32 @@ p,h1, h2{
     text-align: center;
 }
 .TitleProject{
-    margin: 0;
+    margin: 0 0 1vw 0;
     color: white;
     line-height: 36px;
     text-align: center;
 }
 .description{
     color: white;
+    width: 95%;
+    max-width: 1380px;
+    line-height: 26px;
+    font-size: 16px;
 }
 .Project{
     width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .ProjectWrapper{
     display: block;
-    padding: 10px;
-    background-color: #2829288f;
     border-radius: 20px;
 }
 .ProjectImg{
     width: 100%;
+    max-width: 1380px;
     border-radius: 15px;
+    filter: brightness(85%);
 }

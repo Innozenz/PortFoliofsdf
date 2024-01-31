@@ -51,7 +51,7 @@ export default function TextStyled() {
       </p>
 
       <p className="smoothTalk">
-        Portant un attrait particulier pour le développement Web ainsi que l'UI et l'UX
+        Développeur Web en fin de formation chez OpenClassrooms, portant un intérêt particulier pour le développement Web ainsi que l'UI et l'UX
       </p>
     </div>
   );
