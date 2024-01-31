@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Projet n°8 : Créez une App Web De Location Immobilière Avec React",
+        "content": "Ce Projet utilise des technologies bien connues et très utilisées que sont React et le SCSS",
+        "github": "https://github.com/Astuki/Projet8OC",
+        "imgAlt": "Image du Projet n°8, Kasa de OpenClassroom"
+    },
+    {
+        "title": "Projet n°11 : Implémentez le front-end d'une application bancaire avec React",
+        "content": "Le Projet n°11 est le dernier \"Projet\" d'OpenClassroom et le plus difficile techniquement il utilise lui aussi React et le SCSS ainsi que Redux",
+        "github": "https://github.com/Astuki/Projet_11",
+        "imgAlt": "Image du Projet n°11, ArgentBank de OpenClassroom"
+    }
+]

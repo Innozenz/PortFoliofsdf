@@ -51,7 +51,7 @@ export default function TextStyled() {
       </p>
 
       <p className="smoothTalk">
-        Ayant un attrait particulier pour le développement Web ainsi que l'UI et l'UX
+        Portant un attrait particulier pour le développement Web ainsi que l'UI et l'UX
       </p>
     </div>
   );

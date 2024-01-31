@@ -1,0 +1,26 @@
+p,h1{
+    font-family: 'Space Mono', monospace, sans-serif;
+    text-align: center;
+}
+.TitleProject{
+    margin: 0;
+    color: white;
+    line-height: 36px;
+    text-align: center;
+}
+.description{
+    color: white;
+}
+.Project{
+    width: 95%;
+}
+.ProjectWrapper{
+    display: block;
+    padding: 10px;
+    background-color: #2829288f;
+    border-radius: 20px;
+}
+.ProjectImg{
+    width: 100%;
+    border-radius: 15px;
+}

@@ -5,8 +5,9 @@ export default function Stars() {
   const [shootingStars, setShootingStars] = useState([]);
 
   const getRandomColor = () => {
-    const colors = ['blue', 'red', 'yellow', 'purple', 'orange'];
-    return colors[Math.floor(Math.random() * colors.length)];
+    const colors = ['white', 'blue', 'red', 'yellow', 'purple', 'orange'];
+    const isWhite = Math.random() < 0.75; // 75% chance of white
+    return isWhite ? 'white' : colors[Math.floor(Math.random() * colors.length)];
   };
 
   useEffect(() => {
@@ -24,7 +25,7 @@ export default function Stars() {
         generatedStars.push({ x: randomX, y: randomY });
 
         // Generate shooting stars
-        if (Math.random() < 0.10) {
+        if (Math.random() < 0.1) {
           // 10% chance of a shooting star to see
           const color = getRandomColor();
           generatedShootingStars.push({

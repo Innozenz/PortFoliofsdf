@@ -1,6 +1,5 @@
 import React from 'react';
-import placeholder from '../../assets/Img.jpg'
-import Spline from '@splinetool/react-spline';
+import placeholder from '../../Assets/Img.jpg'
 
 
 

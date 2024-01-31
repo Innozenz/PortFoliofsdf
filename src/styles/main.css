@@ -8,7 +8,6 @@ html,
 body {
   height: 100%;
   margin: 0;
-  overflow: hidden;
   margin: 0;
   padding: 0;
 }
@@ -22,7 +21,7 @@ body {
   background-color: white;
   border-radius: 50%;
   pointer-events: none;
-  mix-blend-mode: difference;
+  /*mix-blend-mode: difference; See Later */
   transform: translate(-50%, -50%);
   left: 150px;
   top: 200px;
@@ -160,6 +159,10 @@ body {
   background: linear-gradient(90deg, transparent, transparent);
 }
 
+.shooting-star.white::after {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9), transparent);
+}
+
 .shooting-star.blue::after {
   background: linear-gradient(90deg, rgba(173, 173, 230, 0.5), transparent);
 }
@@ -252,6 +255,38 @@ body {
     transform: translateY(0);
   }
 }
+p, h1 {
+  font-family: "Space Mono", monospace, sans-serif;
+  text-align: center;
+}
+
+.TitleProject {
+  margin: 0;
+  color: white;
+  line-height: 36px;
+  text-align: center;
+}
+
+.description {
+  color: white;
+}
+
+.Project {
+  width: 95%;
+}
+
+.ProjectWrapper {
+  display: block;
+  padding: 10px;
+  background-color: rgba(40, 41, 40, 0.5607843137);
+  border-radius: 20px;
+}
+
+.ProjectImg {
+  width: 100%;
+  border-radius: 15px;
+}
+
 /* Components Styling */
 /* Page Styling May be deleted later  */
 .flexbox {
@@ -259,6 +294,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.flexboxProjects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding-top: 90px;
 }
 
 /* *//*# sourceMappingURL=Main.css.map */
