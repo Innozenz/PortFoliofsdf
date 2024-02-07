@@ -24,6 +24,7 @@ export default function Projects() {
       <main className="flexboxProjects">
         <Project projectData={{ ...jsonData[0], pictures: [Projet8] }} />
         <Project projectData={{ ...jsonData[1], pictures: [Projet11] }} />
+        {/* Modifier façon import ne pas à avoir à écrire, map sur les data directement  */}
         <Skills />
       </main>
       <footer></footer>

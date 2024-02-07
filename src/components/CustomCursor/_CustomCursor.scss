@@ -1,8 +1,8 @@
 .custom-cursor {
   position: absolute;
   z-index: 9999;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background-color: white;
   border-radius: 50%;
   pointer-events: none;
@@ -15,8 +15,8 @@
 
 .light-effect {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
   filter: blur(15px);

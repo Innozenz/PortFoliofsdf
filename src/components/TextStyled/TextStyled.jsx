@@ -46,12 +46,12 @@ export default function TextStyled() {
       <p className="effect" data-value="Di Majo Wilsfried">
         Di Majo Wilsfried
       </p>
-      <p className="effect" data-value="Développeur Web FrontEnd.">
+      <p className="Talk" style={{fontSize: '24px'}}>
         Développeur Web FrontEnd.
       </p>
 
-      <p className="smoothTalk">
-        Développeur Web en fin de formation chez OpenClassrooms, portant un intérêt particulier pour le développement Web ainsi que l'UI et l'UX
+      <p className="Talk">
+        Ayant effectuée une formation chez OpenClassrooms, portant un intérêt particulier pour le développement Web ainsi que l'UI et l'UX
       </p>
     </div>
   );
