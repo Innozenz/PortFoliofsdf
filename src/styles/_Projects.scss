@@ -4,5 +4,15 @@
     align-items: center;
     justify-content: center;
     gap: 25px;
-    padding-top: 90px;
+    padding-top: 100px;
+}
+.contact-footer{
+    padding-top: 55px;
+}
+.on-top{
+    width: 100%;
+    position: fixed;
+    top: 4vh;
+    transform: rotate(180deg);
+    z-index: 99999;
 }

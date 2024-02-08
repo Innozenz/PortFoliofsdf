@@ -26,7 +26,7 @@ export default function Stars() {
 
         // Generate shooting stars
         if (Math.random() < 0.1) {
-          // 10% chance of a shooting star to see
+          // 10% chance spawning chance with each lines
           const color = getRandomColor();
           generatedShootingStars.push({
             x: screenWidth,

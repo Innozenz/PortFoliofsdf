@@ -46,12 +46,13 @@ export default function TextStyled() {
       <p className="effect" data-value="Di Majo Wilsfried">
         Di Majo Wilsfried
       </p>
-      <p className="Talk" style={{fontSize: '24px'}}>
+      <p className="Talk" style={{fontSize: '26px', marginTop: '2px'}}>
         Développeur Web FrontEnd.
       </p>
 
-      <p className="Talk">
-        Ayant effectuée une formation chez OpenClassrooms, portant un intérêt particulier pour le développement Web ainsi que l'UI et l'UX
+      <p className="Talk margin-top">
+      Ayant suivi une formation d'Intégrateur Web chez OpenClassrooms
+      Ma spécialité réside dans l'utilisation du framework React. 
       </p>
     </div>
   );

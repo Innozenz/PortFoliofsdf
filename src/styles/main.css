@@ -24,7 +24,7 @@ body {
   background-color: white;
   border-radius: 50%;
   pointer-events: none;
-  /*mix-blend-mode: difference; See Later */
+  mix-blend-mode: difference;
   transform: translate(-50%, -50%);
   left: 150px;
   top: 200px;
@@ -43,9 +43,10 @@ body {
   top: 50%;
 }
 
-@media only screen and (max-width: 1280px) {
-  .custom-cursor .light-effect {
-    background-color: rgb(246, 246, 94);
+@media screen and (max-width: 350px) {
+  .SkillImg {
+    width: 35px !important;
+    padding-top: 20px !important;
   }
 }
 .bar-container {
@@ -86,24 +87,35 @@ body {
   }
 }
 .textStyled {
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
-  font-size: 24px;
+  font-size: 28px;
   color: aliceblue;
   text-align: center;
   font-family: "Space Mono", monospace, sans-serif;
   max-width: 100%;
 }
 .textStyled .effect {
-  margin: 5px;
+  margin: auto;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 .textStyled .Talk {
-  font-size: 18px;
+  font-size: 15px;
   margin: 0px;
-  padding: 2.5vw 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
   max-width: 980px;
 }
+.textStyled .margin-top {
+  margin-top: 2.5vw;
+}
 
+@media screen and (min-width: 350px) {
+  .Talk {
+    font-size: 20px !important;
+  }
+}
 .wrapper {
   display: flex;
   justify-content: center;
@@ -218,7 +230,6 @@ body {
   height: 20px;
   color: white;
   position: fixed;
-  bottom: 1vh;
 }
 .changePage .arrowDown {
   height: min(5vh, 50px);
@@ -231,7 +242,7 @@ body {
 .changePage .linesEffect .line {
   position: absolute;
   width: 1px;
-  height: 2vh;
+  height: 3vh;
   background-color: white;
   animation: animateLine 1s linear infinite;
 }
@@ -240,26 +251,31 @@ body {
   color: white;
 }
 
+.on-bottom {
+  position: fixed;
+  bottom: 4vh;
+}
+
 @keyframes moveUpAndDown {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
   }
 }
 @keyframes animateLine {
   0% {
-    transform: translateY(20px);
+    transform: translateY(3vh);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-2.5vh);
   }
   100% {
     transform: translateY(0);
   }
 }
-p, h1, h2 {
+p, h1, h2, h3 {
   font-family: "Space Mono", monospace, sans-serif;
   text-align: center;
 }
@@ -308,7 +324,7 @@ p, h1, h2 {
   justify-items: center;
   border-radius: 35px;
   row-gap: 10px;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0px 75px 0px;
 }
 .SkillsWrapper .SkillContainer {
   z-index: 1;
@@ -425,6 +441,80 @@ p, h1, h2 {
     transform: rotate(360deg);
   }
 }
+.footer-content {
+  background: #ffffff;
+  box-shadow: 0 0 0 0.6em rgba(255, 255, 255, 0.05), 0 0 0 1.2em rgba(255, 255, 255, 0.05), 0 0 0 1.8em rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  border-radius: 50% 50% 0% 0%;
+  gap: 100px;
+}
+
+.flag {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  bottom: 50px;
+}
+
+.first {
+  position: relative;
+  left: 25px;
+}
+
+.second {
+  position: relative;
+  right: 25px;
+}
+
+.flag__flagpole {
+  position: relative;
+  height: 195px;
+  width: 4.5px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1411764706);
+  border-radius: 2.5px;
+  background-color: #444;
+  box-shadow: -2px 0 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.flag__flagpole::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600%;
+  height: 3.75px;
+  border-radius: 1.5px;
+  background-color: #444;
+}
+
+.flag__canvas {
+  position: relative;
+  width: 130px;
+  height: 79.5px;
+  margin-top: 1.5px;
+  box-shadow: 0 0 3.75px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text {
+  position: absolute;
+  top: 40px;
+  mix-blend-mode: difference;
+  color: white;
+  text-wrap: nowrap;
+}
+
+.link_footer {
+  margin-bottom: 15px;
+}
+
 /* Components Styling */
 /* Page Styling May be deleted later  */
 .flexbox {
@@ -441,7 +531,19 @@ p, h1, h2 {
   align-items: center;
   justify-content: center;
   gap: 25px;
-  padding-top: 90px;
+  padding-top: 100px;
+}
+
+.contact-footer {
+  padding-top: 55px;
+}
+
+.on-top {
+  width: 100%;
+  position: fixed;
+  top: 4vh;
+  transform: rotate(180deg);
+  z-index: 99999;
 }
 
 /* *//*# sourceMappingURL=Main.css.map */

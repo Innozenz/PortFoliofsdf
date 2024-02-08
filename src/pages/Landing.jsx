@@ -34,8 +34,8 @@ export default function Landing() {
         <TextStyled />
         <Moon />
       </main>
-      <footer>
-        <PageChange />
+      <footer className="on-bottom">
+        <PageChange/>
       </footer>
     </div>
   );

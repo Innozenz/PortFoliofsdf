@@ -7,7 +7,6 @@
   height: 20px;
   color: white;
   position: fixed;
-  bottom: 1vh;
   .arrowDown {
     height: min(5vh, 50px);
     padding: 0px 25px 0 25px;
@@ -18,7 +17,7 @@
     .line {
       position: absolute;
       width: 1px;
-      height: 2vh;
+      height: 3vh;
       background-color: white;
       animation: animateLine 1s linear infinite;
     }
@@ -29,6 +28,11 @@
   color: white;
 }
 
+.on-bottom{
+  position: fixed;
+  bottom: 4vh;
+}
+
 @keyframes moveUpAndDown {
   0%,
   100% {
@@ -36,16 +40,16 @@
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
   }
 }
 
 @keyframes animateLine {
   0% {
-    transform: translateY(20px);
+    transform: translateY(3vh);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-2.5vh);
   }
   100% {
     transform: translateY(0);
