@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import githubImg from "../../Assets/github-icon.png";
 import linkedinImg from "../../Assets/linkedin.png";
 
 export default function Footer() {
   return (
+  <>
     <div className="footer-content">
       <div className="flag first">
         <div className="flag__flagpole"></div>
@@ -41,5 +42,6 @@ export default function Footer() {
         <div className="flag__flagpole"></div>
       </div>
     </div>
+  </>
   );
 }
