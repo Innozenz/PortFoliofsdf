@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import HTML from "../../Assets/Html.webp"
 import CSS from "../../Assets/CSS.png"
@@ -8,6 +8,9 @@ import SASSLogo from "../../Assets/Sass.webp"
 import ViteLogo from "../../Assets/Vite.webp"
 
 export default function Skills() {
+
+  const [multiplicator, setMultiplicator] = useState(1);
+
   const skillsData = [
     { name: 'HTML', imgSrc: HTML, alt: 'HTML Logo', gridRow: 1, gradient: 'linear-gradient(155deg, rgba(252,140,53,1) 0%, rgba(25,14,5,1) 70%)' },
     { name: 'CSS', imgSrc: CSS, alt: 'CSS Logo', gridRow: 2, gradient: 'linear-gradient(155deg, rgba(75,108,183,1) 0%, rgba(7,16,37,1) 70%)' },
@@ -17,9 +20,6 @@ export default function Skills() {
     { name: 'Redux', imgSrc: ReduxLogo, alt: 'Redux Logo', gridRow: 6, gradient: 'linear-gradient(145deg, rgba(118,74,188,1) 0%, rgba(23,8,46,1) 70%)' },
   ];
 
-  const screenWidth = window.innerWidth;
-  let multiplicator = Math.floor(screenWidth / 185);
-  /* appeler la function lors d'un changement de innerWidth */
   const getRandomColumn = () => {
     let randomColumn;
     do {
@@ -30,6 +30,21 @@ export default function Skills() {
     } while (randomColumn === 0);
     return randomColumn;
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      const newMultiplicator = Math.floor(window.innerWidth / 185);
+      setMultiplicator(newMultiplicator);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <>
