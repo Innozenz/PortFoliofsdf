@@ -1,6 +1,5 @@
-import React from "react";
-import githubImg from "../../Assets/github-icon.png";
-import linkedinImg from "../../Assets/linkedin.png";
+import githubImg from "../../assets/github-icon.png";
+import linkedinImg from "../../assets/linkedin.png";
 
 export default function Footer() {
   return (

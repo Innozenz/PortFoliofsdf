@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-import HTML from "../../Assets/Html.webp"
-import CSS from "../../Assets/CSS.png"
-import ReactLogo from "../../Assets/React.webp"
-import ReduxLogo from "../../Assets/Redux.png"
-import SASSLogo from "../../Assets/Sass.webp"
-import ViteLogo from "../../Assets/Vite.webp"
+import HTML from "../../assets/Html.webp"
+import CSS from "../../assets/CSS.png"
+import ReactLogo from "../../assets/React.webp"
+import ReduxLogo from "../../assets/Redux.png"
+import SASSLogo from "../../assets/Sass.webp"
+import ViteLogo from "../../assets/Vite.webp"
 
 export default function Skills() {
 

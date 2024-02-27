@@ -1,4 +1,4 @@
-import React from "react";
+
 
 /* Components imported */
 import CustomCursor from "../components/CustomCursor/CustomCursor";
@@ -14,8 +14,8 @@ import jsonData from "../components/JsonData/Project.json";
 /* JSON DATA */
 
 /* Utilities */
-import Projet8 from "../Assets/Appartement8.webp";
-import Projet11 from "../Assets/Bank11.webp";
+import Projet8 from "../assets/Appartement8.webp";
+import Projet11 from "../assets/Bank11.webp";
 /* Utilities */
 
 export default function Projects() {

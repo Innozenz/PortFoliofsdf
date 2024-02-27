@@ -1,5 +1,4 @@
-import React from 'react';
-import placeholder from '../../Assets/Img.jpg'
+import placeholder from '../../assets/Img.jpg'
 
 
 
